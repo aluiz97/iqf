@@ -3,10 +3,7 @@ package com.projeto.firstone.controller;
 import com.projeto.firstone.model.Diretoria;
 import com.projeto.firstone.service.DiretoriaService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -30,7 +27,7 @@ public class DiretoriaController {
     }
 
     @PostMapping
-    public Diretoria criar(Diretoria diretoria) {
+    public Diretoria criar(@RequestBody Diretoria diretoria) {
 
         return this.diretoriaService.criar(diretoria);
     }
