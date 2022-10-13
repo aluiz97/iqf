@@ -7,4 +7,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document("diretoria")
 public class Diretoria {
 
+    private String codigoSquad;
+
+    private String squad;
+
+    private String diretoria;
+
+    private String agilista;
 }
