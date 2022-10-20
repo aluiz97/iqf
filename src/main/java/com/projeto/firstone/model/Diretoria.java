@@ -1,6 +1,7 @@
 package com.projeto.firstone.model;
 
 import lombok.Data;
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -9,11 +10,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Diretoria {
 
     @Id
-    private String codigoSquad;
-
-    private String squad;
-
+    private ObjectId agilistaId;
+    private String nomeAgilista;
     private String diretoria;
 
-    private String agilista;
 }

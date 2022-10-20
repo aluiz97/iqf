@@ -1,14 +1,13 @@
 package com.projeto.firstone.service;
 
-import com.projeto.firstone.model.Fornecedor;
+import com.projeto.firstone.repository.FornecedorRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import java.util.List;
+@Service
+public class FornecedorService {
 
-public interface FornecedorService {
+    @Autowired
+    private FornecedorRepository fornecedorRepository;
 
-    public List<Fornecedor> obterTodosFornecedores();
-
-    public Fornecedor obterFornecedorPorCodigo(String codigoFornecedor);
-
-    public Fornecedor criarFornecedor(Fornecedor fornecedor);
 }

@@ -1,14 +1,17 @@
 package com.projeto.firstone.service;
 
 import com.projeto.firstone.model.Diretoria;
+import com.projeto.firstone.repository.DiretoriaRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-public interface DiretoriaService {
+@Service
+public class DiretoriaService {
 
-    public List<Diretoria> obterTodasSquads();
+    @Autowired
+    private DiretoriaRepository diretoriaRepository;
 
-    public Diretoria obterSquadPorCodigo(String codigoSquad);
 
-    public Diretoria criar(Diretoria diretoria);
 }

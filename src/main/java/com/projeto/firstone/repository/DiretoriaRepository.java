@@ -1,11 +1,11 @@
 package com.projeto.firstone.repository;
 
 import com.projeto.firstone.model.Diretoria;
+import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.List;
+@Repository
+public interface DiretoriaRepository extends MongoRepository<Diretoria, ObjectId> {
 
-public interface DiretoriaRepository extends MongoRepository<Diretoria, String> {
-
-    public List<Diretoria> findBySquad(String squad);
 }
