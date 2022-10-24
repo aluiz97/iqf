@@ -10,8 +10,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Diretoria {
 
     @Id
-    private ObjectId agilistaId;
+    private ObjectId diretoriaId;
+    private String nomeDiretoria;
     private String nomeAgilista;
-    private String diretoria;
+
 
 }
