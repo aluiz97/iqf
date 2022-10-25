@@ -16,27 +16,38 @@ import java.time.LocalDate;
 public class Formulario {
 
     @Id
-//    @JsonProperty("co_formulario") //nome que aparecerá no campo no json
-//    @Field("id") //nome que será salvo no banco
+    @JsonProperty("co_formulario") //nome que aparecerá no campo no json
+    @Field("id") //nome que será salvo no banco
     private ObjectId id;
 
-//    @JsonProperty("co_formulario")
-//    @Field("id")
+    @JsonProperty("co_peso_nota")
+    @Field("peso_nota")
     private Integer pesoNota;
 
- //   @JsonProperty("co_formulario")
- //   @Field("id")
+    @JsonProperty("co_nota")
+    @Field("nota")
     private Integer nota;
 
-    //private LocalDate dataFormulario;
- //   @JsonProperty("co_formulario")
- //   @Field("id")
+    @JsonProperty("co_data")
+    @Field("data")
+    private LocalDate dataFormulario;
+
+    @JsonProperty("co_escopo")
+    @Field("escopo")
     private Escopo escopo; //Talvez fazer uma lista aqui
 
+    @JsonProperty("co_fornecedor")
+    @Field("fornecedor")
     @DBRef
     private Fornecedor fornecedor;
+
+    @JsonProperty("co_diretoria")
+    @Field("diretoria")
     @DBRef
     private Diretoria diretoria;
+
+    @JsonProperty("co_squad")
+    @Field("squad")
     @DBRef
     private Squad squad;
 
