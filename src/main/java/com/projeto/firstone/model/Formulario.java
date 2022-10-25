@@ -8,6 +8,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 
@@ -30,6 +31,7 @@ public class Formulario {
 
     @JsonProperty("co_data")
     @Field("data")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate dataFormulario;
 
     @JsonProperty("co_escopo")

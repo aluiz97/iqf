@@ -11,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.Arrays;
+
 @Configuration
 public class Instantiation implements CommandLineRunner {
 
@@ -35,8 +37,13 @@ public class Instantiation implements CommandLineRunner {
         squadRepository.deleteAll();
         diretoriaRepository.deleteAll();
 
-        Fornecedor fornecedor = new Fornecedor();
-        fornecedor.setNomeFornecedor("Delloite");
+        Fornecedor fornecedor1 = new Fornecedor();
+        Fornecedor fornecedor2 = new Fornecedor();
+        Fornecedor fornecedor3 = new Fornecedor();
+
+        fornecedor1.setNomeFornecedor("Delloite");
+        fornecedor2.setNomeFornecedor("Dextra");
+        fornecedor3.setNomeFornecedor("Monitora");
 
         Squad squad = new Squad();
         squad.setNomeSquad("Kratos");
@@ -45,7 +52,7 @@ public class Instantiation implements CommandLineRunner {
         diretoria.setNomeDiretoria("DS");
         diretoria.setNomeAgilista("Ronald");
 
-        fornecedorRepository.save(fornecedor);
+        fornecedorRepository.saveAll(Arrays.asList(fornecedor1, fornecedor2, fornecedor3));
         squadRepository.save(squad);
         diretoriaRepository.save(diretoria);
 
