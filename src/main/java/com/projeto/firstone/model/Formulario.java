@@ -29,6 +29,10 @@ public class Formulario {
     @Field("nota")
     private Integer nota;
 
+    @JsonProperty("co_justificativa")
+    @Field("justificativa")
+    private String justificativa;
+
     @JsonProperty("co_data")
     @Field("data")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
@@ -53,4 +57,16 @@ public class Formulario {
     @DBRef
     private Squad squad;
 
+
+    public Formulario(ObjectId id, Integer pesoNota, Integer nota, String justificativa, LocalDate dataFormulario, Escopo escopo, Fornecedor fornecedor, Diretoria diretoria, Squad squad) {
+        this.id = id;
+        this.pesoNota = pesoNota;
+        this.nota = nota;
+        this.justificativa = justificativa;
+        this.dataFormulario = dataFormulario;
+        this.escopo = escopo;
+        this.fornecedor = fornecedor;
+        this.diretoria = diretoria;
+        this.squad = squad;
+    }
 }

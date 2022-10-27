@@ -33,7 +33,7 @@ public class FornecedorController {
     }
 
     @GetMapping("/idsearch")
-    public ResponseEntity<ObjectId> findIdByName(@RequestParam(value = "nomeFornecedor", defaultValue = "") String nomeFornecedor) {
+    public ResponseEntity<String> findIdByName(@RequestParam(value = "nomeFornecedor", defaultValue = "") String nomeFornecedor) {
 
         return ResponseEntity.ok().body( fornecedorService.findIdByName(nomeFornecedor));
     }

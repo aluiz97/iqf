@@ -34,11 +34,11 @@ public class FornecedorService {
         return listNames;
     }
 
-    public ObjectId findIdByName(String nomeFornecedor) {
+    public String findIdByName(String nomeFornecedor) {
 
         Fornecedor fornecedor = fornecedorRepository.searchName(nomeFornecedor);
 
-        return fornecedor.getFornecedorId();
+        return fornecedor.getFornecedorId().toString();
     }
 
 
