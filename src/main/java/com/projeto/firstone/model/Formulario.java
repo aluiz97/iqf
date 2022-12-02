@@ -3,6 +3,7 @@ package com.projeto.firstone.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.projeto.firstone.model.enums.Escopo;
 import lombok.Data;
+import lombok.ToString;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
